@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/admin/Desktop/Envios.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1039"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,6:mainEnvios"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Envios" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="73"/><column index="2" value="96"/><column index="3" value="79"/><column index="4" value="105"/><column index="5" value="215"/><column index="6" value="48"/><column index="7" value="54"/><column index="8" value="108"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">create table Envios (
+	ID_Envio INT,
+	Fecha_Envio DATE,
+	Fecha_Entrega DATE,
+	Direccion_Origen VARCHAR(50),
+	Direccion_Destino VARCHAR(50),
+	Peso INT,
+	Costo INT,
+	Estado TEXT
+);
+
+SELECT * FROM Envios WHERE Peso BETWEEN 10 AND 70
+SELECT * FROM Envios WHERE ID_Envio in (Fecha_Envio,Peso,Costo) &lt; 30
+SELECT ID_Envio, Fecha_Envio FROM Envios WHERE Direccion_Origen like '%Terrace'
+SELECT Direccion_Origen, Direccion_Destino FROM Envios WHERE ID_Envio in (10,14,11,49,50)
+UPDATE Envios SET Peso = 50 WHERE Estado = 'pendiente'
+
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (1, '5/17/2022', '11/29/2022', '6 School Alley', '49 Shoshone Junction', 35, 35, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (2, '3/15/2023', '7/17/2022', '3274 Village Point', '2922 Blue Bill Park Street', 87, 97, 'cancelado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (3, '4/21/2022', '3/18/2023', '58757 Stephen Circle', '6934 Crest Line Center', 69, 22, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (4, '6/9/2022', '10/6/2022', '6 Stuart Street', '83228 Westerfield Point', 86, 78, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (5, '1/30/2023', '4/6/2022', '7 Hoepker Place', '035 Express Parkway', 17, 79, 'cancelado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (6, '6/1/2022', '2/22/2023', '9037 Eastwood Hill', '9 Lighthouse Bay Center', 71, 84, 'entregado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (7, '2/1/2023', '2/9/2023', '69 Summerview Parkway', '50 Messerschmidt Place', 46, 81, 'cancelado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (8, '3/26/2023', '2/3/2023', '161 Thierer Parkway', '87532 Stone Corner Park', 98, 43, 'entregado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (9, '6/27/2022', '1/8/2023', '74 Parkside Pass', '6 Homewood Junction', 81, 11, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (10, '6/6/2022', '3/25/2023', '583 Mandrake Terrace', '2 Artisan Park', 100, 18, 'cancelado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (11, '6/28/2022', '1/3/2023', '62750 Gerald Plaza', '53215 Almo Street', 9, 38, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (12, '3/3/2023', '6/21/2022', '65437 Mcbride Drive', '3826 Daystar Plaza', 79, 59, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (13, '4/7/2022', '11/21/2022', '5 5th Park', '616 Reindahl Drive', 23, 62, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (14, '11/26/2022', '8/10/2022', '18602 Blaine Circle', '436 Village Place', 52, 28, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (15, '6/28/2022', '1/22/2023', '527 Schiller Terrace', '020 Hauk Hill', 88, 51, 'entregado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (16, '6/18/2022', '6/14/2022', '04 Hanson Pass', '6169 Russell Junction', 47, 60, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (17, '7/3/2022', '8/23/2022', '24933 8th Point', '5 Ridgeview Center', 55, 40, 'cancelado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (18, '11/5/2022', '5/7/2022', '855 Almo Terrace', '474 Bartillon Avenue', 78, 7, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (19, '4/5/2022', '2/11/2023', '0775 Calypso Trail', '8 4th Lane', 14, 75, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (20, '11/1/2022', '12/6/2022', '100 Monument Way', '47951 Londonderry Terrace', 2, 33, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (21, '1/30/2023', '12/6/2022', '74 Hazelcrest Parkway', '7 Surrey Terrace', 83, 34, 'entregado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (22, '8/28/2022', '9/11/2022', '566 Arizona Crossing', '902 Graceland Park', 87, 38, 'entregado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (23, '4/1/2022', '4/2/2022', '436 Luster Trail', '4 Crest Line Parkway', 55, 93, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (24, '10/16/2022', '4/16/2022', '5877 Gina Crossing', '944 Waywood Parkway', 74, 40, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (25, '8/18/2022', '8/14/2022', '77908 Swallow Park', '11159 Bartillon Circle', 51, 39, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (26, '6/9/2022', '9/25/2022', '91513 Melrose Circle', '2817 Bunting Court', 34, 27, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (27, '5/26/2022', '11/1/2022', '077 Carberry Trail', '9394 Crest Line Hill', 77, 98, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (28, '6/26/2022', '6/13/2022', '62258 Barnett Road', '2034 Thompson Avenue', 2, 7, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (29, '4/7/2022', '1/9/2023', '7937 Mallory Center', '3 4th Place', 33, 99, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (30, '10/28/2022', '8/23/2022', '861 Nelson Center', '176 Susan Plaza', 41, 53, 'cancelado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (31, '1/23/2023', '6/6/2022', '2239 Tennyson Pass', '69123 Service Crossing', 12, 16, 'cancelado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (32, '9/24/2022', '12/24/2022', '153 Elgar Trail', '2 Sauthoff Road', 10, 60, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (33, '9/30/2022', '6/4/2022', '1611 Columbus Parkway', '8500 Valley Edge Center', 70, 1, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (34, '9/11/2022', '6/21/2022', '41 Stephen Drive', '73437 Banding Plaza', 94, 28, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (35, '4/30/2022', '10/21/2022', '231 Mallory Way', '219 Old Gate Crossing', 23, 12, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (36, '11/29/2022', '1/18/2023', '147 Sunfield Circle', '5 North Place', 39, 94, 'entregado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (37, '7/15/2022', '4/29/2022', '2029 Sundown Terrace', '72 Pennsylvania Terrace', 56, 94, 'cancelado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (38, '7/19/2022', '6/29/2022', '7468 Buhler Pass', '299 Clove Drive', 1, 78, 'entregado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (39, '12/2/2022', '11/20/2022', '241 Esker Center', '5243 Larry Park', 57, 9, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (40, '9/7/2022', '5/31/2022', '56 School Drive', '2588 7th Pass', 64, 52, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (41, '7/12/2022', '8/17/2022', '291 Clemons Avenue', '2645 Helena Parkway', 24, 12, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (42, '4/12/2022', '3/30/2023', '2 Donald Lane', '2 Thierer Way', 85, 98, 'cancelado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (43, '2/1/2023', '10/16/2022', '3 Lerdahl Plaza', '755 Miller Terrace', 19, 69, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (44, '4/23/2022', '9/27/2022', '28443 Union Point', '86909 Southridge Drive', 78, 26, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (45, '3/8/2023', '3/10/2023', '4 Crescent Oaks Avenue', '660 Butterfield Avenue', 40, 7, 'enviado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (46, '1/28/2023', '3/6/2023', '14530 Grayhawk Alley', '20873 Florence Drive', 23, 9, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (47, '12/3/2022', '7/22/2022', '4429 Center Crossing', '0950 Bowman Junction', 48, 59, 'entregado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (48, '4/30/2022', '12/3/2022', '740 Oneill Circle', '887 Bowman Point', 3, 10, 'pendiente');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (49, '9/4/2022', '9/24/2022', '2376 Moose Plaza', '07 Superior Street', 57, 16, 'entregado');
+insert into Envios (ID_Envio, Fecha_Envio, Fecha_Entrega, Direccion_Origen, Direccion_Destino, Peso, Costo, Estado) values (50, '12/18/2022', '9/4/2022', '3683 Crownhardt Place', '1555 3rd Circle', 81, 94, 'enviado');</sql><current_tab id="0"/></tab_sql></sqlb_project>

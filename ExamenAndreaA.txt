@@ -1,0 +1,15 @@
+1 Seleccionar los registros cuyo peso se encuentren entre 10 y 70
+
+2 Seleccionar las fecha de envio, peso y costo de los ID_envio mayores a 3	0
+
+3 Seleccionar el ID_envio y fecha de envio cuya direccion termine en Terrace 
+
+4 Seleccionar la direccion de origen y direccion destino de los envios cuyo ID sea 10,14,11,49 y 50	
+
+5 actualizar el peso a 50 de los envios cuyo estado sea pendiente
+
+SELECT * FROM Envios WHERE Peso BETWEEN 10 AND 70
+SELECT * FROM Envios WHERE ID_Envio in (Fecha_Envio,Peso,Costo) < 30
+SELECT ID_Envio, Fecha_Envio FROM Envios WHERE Direccion_Origen like '%Terrace'
+SELECT Direccion_Origen, Direccion_Destino FROM Envios WHERE ID_Envio in (10,14,11,49,50)
+UPDATE Envios SET Peso = 50 WHERE Estado = 'pendiente'
